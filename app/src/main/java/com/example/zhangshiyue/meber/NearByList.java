@@ -17,7 +17,7 @@ import java.util.ArrayList;
 /**
  * Created by zhangshiyue on 15-3-10.
  */
-public class NearByListView extends Activity {
+public class NearByList extends Activity {
 
     SqlDbHelper Helper;
     ListView nearByList;

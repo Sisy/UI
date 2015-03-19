@@ -7,18 +7,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.SearchView;
-import android.widget.Toast;
-
-import java.util.Objects;
 
 
 public class MyActivity extends Activity {
@@ -41,16 +36,21 @@ public class MyActivity extends Activity {
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getBaseContext(),"pic"+(position+1)+"select",Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getBaseContext(),"pic"+(position+1)+"select",Toast.LENGTH_SHORT).show();
+                Intent intent;
                 switch (position){
                     case 0:
-                        Intent intent = new Intent(MyActivity.this, NearByListView.class);
+                        intent = new Intent(MyActivity.this, NearByList.class);
                         startActivity(intent);
+                        break;
                     case 1:;
                     case 2:;
                     case 3:;
                     case 4:;
-                    case 5:;
+                    case 5:
+                        intent = new Intent(MyActivity.this, EventsList.class);
+                        startActivity(intent);
+                        break;
                     case 6:;
                 }
             }
